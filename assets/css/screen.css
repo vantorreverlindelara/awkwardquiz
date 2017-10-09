@@ -1,0 +1,324 @@
+/*---------------------*/
+/*      Parallax       */
+/*---------------------*/
+.parallax .parallax-image  {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+.landing-page .parallax {
+  width: 100%;
+  height: 1000px;
+  overflow: hidden;
+  display: block;
+  background-size: 100%;
+}
+
+.landing-page .parallax .description h2{
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  font-weight: 200;
+  font-size: 40px;
+}
+
+
+.landing-page .parallax .parallax-background img{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.landing-page .parallax .parallax-background img.flipped{     //mobile device in liggende toestand
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.landing-page .parallax .container{
+  z-index: 2;
+  position: absolute;
+  top: 0;
+}
+
+.landing-page .parallax .description{
+  margin-top: 200px;
+  color: white;
+  padding: 5px;
+}
+
+/*---------------------------*/
+/*  Oranje filter op foto   */
+/*--------------------------*/
+
+.filter-gradient{
+  position: relative;
+}
+
+.filter-gradient:after{
+  background-size: 2000px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  content: "";
+  opacity: .7;
+}
+
+.filter-gradient.orange:after{
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmYTE3ZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDIyM2UiIHN0b3Atb3BhY2l0eT0iMC44NyIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  rgba(255,161,127,1) 0%, rgba(0,34,62,0.87) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,161,127,1)), color-stop(100%,rgba(0,34,62,0.87))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(255,161,127,1) 0%,rgba(0,34,62,0.87) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(255,161,127,1) 0%,rgba(0,34,62,0.87) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(255,161,127,1) 0%,rgba(0,34,62,0.87) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(255,161,127,1) 0%,rgba(0,34,62,0.87) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa17f', endColorstr='#de00223e',GradientType=0 ); /* IE6-8 */
+}
+
+
+/*---------------------*/
+/*      Footer         */
+/*---------------------*/
+.footer {
+  padding: 20px 0;
+  background-color: #EEEEEE;
+  line-height: 20px;
+}
+
+.copyright {    //copyright Lara Vantorre Verlinde
+  color: #777777;
+  padding: 10px 15px;
+  margin: 15px 3px;
+  line-height: 20px;
+  text-align: center;
+}
+
+/*------------------------*/
+/*        Buttons         */
+/*------------------------*/
+
+.btn {
+  border: 2px solid white;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  padding: 8px 16px;
+}
+
+.btn:hover, .btn:focus {
+  background-color: transparent;
+  border: 2px solid white;
+  opacity: 1;
+}
+/*------------------------*/
+/*        Titels          */
+/*------------------------*/
+
+.hide {
+  display:none;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+h1, h2, p, .navbar, a {
+  -moz-osx-font-smoothing: grayscale;       /*meer Helvetica Neue Light-effectje*/
+  -webkit-font-smoothing: antialiased;      /*meer Helvetica Neue Light-effectje*/
+}
+
+h1, h2, .navbar, a {
+  color: #ffffff;
+}
+
+h1, h2 {
+  font-weight: 400;
+  margin: 30px 0 15px;
+}
+
+h1 {
+  font-size: 152px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+a:hover, a:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+img[alt="Awkward Logo"]{
+  height: 50px;
+  width: 200px;
+  margin-left: 5px;
+}
+
+
+.section-gray {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+
+.section-white {
+  background-color: #FFFFFF;
+}
+
+
+.navbar {
+  border: 0px;
+  font-size: 2rem;
+}
+
+p {
+  margin-top: 30px;
+}
+
+p, li {     //opmaak tekst
+  line-height: 28px;
+  font-size: 1.8rem;
+}
+
+#volgendvraagje {
+  font-size: 2rem;
+}
+
+#opnieuwSpelen {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.8rem;
+}
+
+.genereerEensEenZin, #gameOver{
+padding-top: 70px;
+}
+
+
+.logo-container{
+  margin-top: 10px;
+}
+
+.section .container{  //tekstvak van tutorial smaller
+  max-width: 970px;
+}
+
+.header-text{
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  position: relative;
+  line-height: 24px;
+}
+
+.landing-page .navbar-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+#beginKnop, .copyright {
+  font-weight: 700;
+}
+
+/*------------------------*/
+/*     Responsiveness     */
+/*------------------------*/
+
+@media (max-width: 767px){  /* iPhone 6 */
+
+  .section-gray {
+    height: 560px;
+  }
+
+  #tutorial {
+    height: 830px;
+  }
+
+  .landing-page .parallax {
+    height: 490px;
+  }
+
+  .landing-page .parallax .container{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+  }
+
+  .btn {
+    width: 165px;
+    height: 60px;
+  }
+
+  .nav > li {
+    text-align: center;       /*menu-items ih midden*/
+  }
+
+  .navbar-toggle .icon-bar{
+    background: white;        /*drie streepjes: wit*/
+  }
+
+  .wrapper{
+    text-align: center;
+  }
+
+  .landing-page .navbar-top{
+    background: rgba(255, 255, 255, 0.25);    /*kleur vd navigatie op mobiel*/
+  }
+  .landing-page .parallax {
+    height: 550px;
+  }
+  .landing-page .parallax .parallax-background img {
+    width: 228%;
+    height: auto;
+    margin-left: -160px;
+  }
+
+  label {
+    display: block;
+  }
+
+  input[type=radio] {     /*radio button van navigatie groter*/
+    width: 11%;
+    height: 3rem;
+  }
+
+  button[type="submit"], .score, #next {
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+  }
+
+  #volgendvraagje {
+    font-weight: 700;
+  }
+
+}
+
+@media (min-width: 768px){ /* iPad */
+  .landing-page .navbar-top{
+    padding-top: 10px;
+  }
+
+  .landing-page .parallax {
+    height: 490px;
+  }
+}
+
+@media (min-width: 1200px){ /* Gewoon laptopscherm */
+  .landing-page .parallax {
+    height: 1000px;
+  }
+}

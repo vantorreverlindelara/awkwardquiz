@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico"> <!--Strikje bij tabbladtitle-->
+  <title>Awkward</title>
+  <meta content='width=device-width' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=" ./assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="assets/css/bootstrap.css" rel="stylesheet" />
+  <link href="assets/css/screen.css" rel="stylesheet"/>
+</head>
+
+<body class="landing-page">
+  <section id="step1">
+    <nav class="navbar navbar-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mobileNavigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar bar1"></span>
+            <span class="icon-bar bar2"></span>
+            <span class="icon-bar bar3"></span>
+          </button>
+          <a href="index.html">
+            <div class="logo">
+              <img src="assets/img/AwkwardLogo.png" alt="Awkward Logo">
+            </div>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="mobileNavigation">
+          <ul class="nav navbar-nav navbar-right">
+            <button class="btn btn-default">
+              <a href="#configuratieSpel">Speel het spel</a>
+            </button>
+            <button class="btn btn-default">
+              <a href="#uitleg">Uitleg</a>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="wrapper">
+      <div class="parallax filter-gradient orange" data-color="orange">
+        <div class="parallax-background">
+          <img class="parallax-background-image" src="./assets/img/friends2.jpg">
+        </div>
+        <div class= "container">
+          <div class="description">
+            <h2>Klaar om je vriendenkennis te testen?</h2>
+            <br>
+          </div>
+          <button class="btn btn-default btn-transparant">
+            <a href="#configuratieSpel">Speel het spel</a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="section section-gray" id="tutorial">
+      <div class="container">
+        <h2 class="header-text" id="uitleg">Hoe werkt het spel?</h2>
+        <p>
+          Het spel werkt als volgt…
+          Ofwel kies je voor de casual modus ofwel voor de spel modus. Bij de eerstgenoemde modus kies je uit een aantal categorieën (nl. algemeen, seks, controversieel en een mix van voorgaande). Daarna verschijnt vraag per vraag op het scherm. Als je voor de spel modus kiest, dan speel je met minimum twee spelers. Er staat geen maximum op het aantal spelers. Na de configuratie van het spel verschijnen er twee namen, speler A en speler B, op het scherm. Speler A zal een vraag moeten beantwoorden over speler B. De spelers, die op het scherm verschijnen, zijn willekeurig gekozen uit alle opgegeven spelers. Het kan dus ook best zijn dat speler A tweemaal na elkaar een vraag over iemand anders moet beantwoorden. De vraag moet in het echt luidop beantwoord worden en speler B (waarover de vraag ging) kiest dan of het antwoord uitstekend (+ 2 punten), middelmatig (+ 1 punt) of fout (geen punten) was. Wanneer de vragen “op” zijn, wordt er een game-over scherm getoond met de scores.
+        </p>
+      </div>
+    </div>
+    <div class="section section-white">
+      <div class="container">
+        <h2 class="header-text" id="configuratieSpel">Configureer het spel</h2>
+        <form action="#" method="post" id="configuratie" name="test">
+
+          <label for="soortModus">Kies het soort spel dat je wilt spelen</label>
+          <input type="radio" name="soortModus" value="Spel modus" required="required"/> Spel modus
+          <input type="radio" name="soortModus" value="Casual modus" required="required"/> Casual modus
+
+          <label for="categorie">Kies een categorie</label>
+          <input type="radio" name="categorie" value="1" required="required"/> Algemeen
+          <input type="radio" name="categorie" value="2" required="required"/> Seks
+          <input type="radio" name="categorie" value="3" required="required"/> Controversieel
+          <input type="radio" name="categorie" value="4" required="required"/> Mix van bovenstaande
+
+          <div id="spelModusGekozen" class="hide">
+            <div class="form-group">
+              <label for="aantalSpelers">Vul het aantal spelers in</label>
+              <input type="number" class="form-control" name="aantalSpelers" placeholder="Aantal spelers: " id="aantalSpelers" min="2" value="2" />
+            </div>
+
+            <label>Kies een naam voor de spelers</label>
+            <div id="namenSpelers"></div>
+          </div>
+
+          <button type="submit" class="btn-default">Let's play!</button>
+
+        </form>
+      </div>
+    </div>
+  </section>
+  <section id="step2" class="hide">
+    <nav class="navbar navbar-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html">
+            <div class="logo">
+              <img src="assets/img/AwkwardLogo.png" alt="Awkward Logo">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="section section-gray">
+      <div class="container genereerEensEenZin"></div>
+      <p id="volgendvraagje"></p>
+      <button id="next" class="btn-default hide">Volgende vraag</button>
+
+      <div id="puntentoekenning" class="hide">
+        <button id="beginKnop" class="btn-default score">Klik hier om te beginnen</button>
+        <button value="2" class="btn-default score" disabled="disabled">Uitstekend antwoord (+ 2 punten)</button>
+        <button value="1"  class="btn-default score" disabled="disabled">Matig antwoord (+ 1 punt)</button>
+        <button value="0" class="btn-default score" disabled="disabled">Fout antwoord (geen punten)</button>
+        <button id="stopSpel" class="btn-default score">Stop het spel</button>
+      </div>
+    </div>
+  </section>
+  <section id="step3" class="hide">
+    <nav class="navbar navbar-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html">
+            <div class="logo">
+              <img src="assets/img/AwkwardLogo.png" alt="Awkward Logo">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="section section-gray">
+      <div class="container"></div>
+      <h2 class="header-text" id="gameOver">Game-over!</h2>
+      <ol id="scorebord">
+
+      </ol>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; 2016 Lara Vantorre Verlinde, <br /> made with love and stress
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+</body>
+<script src="assets/js/jquery-3.1.1.js" type="text/javascript"></script>
+<script src="assets/js/bootstrap.js" type="text/javascript"></script>
+<script src="assets/js/pushnotifications.js" type="text/javascript"></script>
+<script src="assets/js/script.js" type="text/javascript"></script>
+<script src="assets/js/app.js" type="text/javascript"></script>
+</html>
